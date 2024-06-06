@@ -17,8 +17,19 @@ public class Main {
         driver.findElement(By.className("signInBtn")).click();
         System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
         driver.findElement(By.linkText("Forgot your password?")).click();
-        //driver.close();
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Roland");
+        driver.findElement(By.cssSelector("input[type='password']")).sendKeys("john@rsa.com");
+        driver.findElement(By.xpath("//input[@type='text'][2]")).clear();
+        driver.findElement(By.xpath("//input[@type='text'][2]")).sendKeys("arya@rsa.com");
+        driver.findElement(By.cssSelector("input[placeholder='Phone Number']")).sendKeys("1234567890");
+        driver.findElement(By.cssSelector("input[type='text']:nth-child(4)")).clear();
+        driver.findElement(By.cssSelector("input[type='text']:nth-child(4)")).sendKeys("555123");
 
+
+
+
+
+        //driver.close();
 
     }
 }
